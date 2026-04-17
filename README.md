@@ -1,2 +1,2 @@
-# indigo-cycling-site
-Code base for the indigocycling.com website hosted on SquareSpace
+# Indigo Cycling Chicago Website
+https://www.indigocycling.cc
