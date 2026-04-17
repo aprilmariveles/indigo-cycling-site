@@ -12,11 +12,13 @@ hosted on GitHub Pages and embedded into Squarespace via iframes.
 ## Pages
 | File | Squarespace URL | Status |
 |------|----------------|--------|
-| index.html | / (homepage) | in progress |
-| team.html | /team | in progress |
-| sponsors.html | /sponsors | in progress |
-| events.html | /events | planned |
-| shop.html | /shop | planned |
+| index.html    | / (homepage)  | in progress |
+| about.html    | /about        | in progress |
+| team.html     | /team         | in progress |
+| grants.html   | /grants       | in progress |
+| sponsors.html | /sponsors     | in progress |
+| events.html   | /events       | planned |
+| shop.html     | /shop         | planned |
 
 ## Deployment
 Hosted via GitHub Pages at:
