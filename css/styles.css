@@ -1,1 +1,153 @@
 /* Indigo Cycling - Main Stylesheet */
+
+/* ============================================
+   Fonts
+   ============================================ */
+
+/* Glancyr — display / heading font */
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/glancyr/glancyr-extra-light-100.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/glancyr/glancyr-light-200.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/glancyr/glancyr-regular-400.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/glancyr/glancyr-medium-500.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/glancyr/glancyr-semibold-600.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('../assets/fonts/glancyr/glancyr-bold-700.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Work Sans — body / UI font (variable) */
+@font-face {
+  font-family: 'Work Sans';
+  src: url('../assets/fonts/work-sans/WorkSans-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================
+   Color Palette
+   ============================================ */
+
+:root {
+  /* Brand colors */
+  --color-tarmac: #888780;        /* grey */
+  --color-chalk: #F7F6F2;         /* off-white */
+  --color-slipstream: #EEEDFE;    /* lavender */
+  --color-sprint: #C8E02A;        /* chartreuse */
+  --color-indigo: #534AB7;        /* purple */
+  --color-velodrome: #0E1040;     /* navy */
+  --color-lower-wacker: #202023;  /* near black */
+
+  /* Utility colors */
+  --color-border-grey: #E0DDD5;
+  --color-deep-char-green: #4A5200;
+}
+
+/* ============================================
+   Base / Reset
+   ============================================ */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-weight: 400;
+  line-height: 1.5em;
+  letter-spacing: 0;
+  color: var(--color-lower-wacker);
+  background-color: var(--color-chalk);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================
+   Typography
+   ============================================ */
+
+h1, h2, h3, h4 {
+  font-family: 'Glancyr', sans-serif;
+  font-weight: 600;
+  line-height: 1em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-velodrome);
+}
+
+h1 {
+  font-size: 3.052rem;
+}
+
+h2 {
+  font-size: 2.441rem;
+}
+
+h3 {
+  font-size: 1.953rem;
+}
+
+h4 {
+  font-size: 1.563rem;
+}
+
+p, .p2 {
+  font-size: 1rem;
+}
+
+.p1 {
+  font-size: 1.25rem;
+}
+
+.p3 {
+  font-size: 0.8rem;
+}
+
+a {
+  color: var(--color-indigo);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
