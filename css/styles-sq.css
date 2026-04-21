@@ -1,0 +1,592 @@
+/* =====================================
+   INDIGO CYCLING CHICAGO — Complete Global Stylesheet
+   Heading font: Glancyr (uploaded custom)
+   Body font: Work Sans
+   Last updated: Apr 12, 2026
+===================================== */
+
+/* ── FONTS ── */
+@font-face {
+  font-family: 'Glancyr';
+  src: url('https://static1.squarespace.com/static/66102729044a365f961127e0/t/69d99365d962d805767cf008/1775866725968/glancyr-regular-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('https://static1.squarespace.com/static/66102729044a365f961127e0/t/69d992cea0a8f2548e762145/1775866574309/glancyr-medium-500.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('https://static1.squarespace.com/static/66102729044a365f961127e0/t/69d9936635751f0597a0b508/1775866726071/glancyr-semibold-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Glancyr';
+  src: url('https://static1.squarespace.com/static/66102729044a365f961127e0/t/69d992ce438cbb2a552bb92e/1775866574337/glancyr-bold-700.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* ── Base ── */
+body {
+  background-color: #f7f6f2;
+  color: #0e1040;
+}
+
+/* ── Body text ── */
+p,
+.sqs-block-html p {
+  font-size: 15px;
+  line-height: 1.75;
+}
+
+p strong,
+p b {
+  font-weight: 700;
+}
+
+/* ── Hyperlink text (all inline links) ── */
+p a {
+  color: inherit !important;
+  text-decoration: underline !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: currentColor !important;
+  text-decoration-thickness: 1px !important;
+  text-underline-offset: 5px !important;
+}
+
+p a:hover {
+  text-decoration: none !important;
+}
+
+/* ── Button-style links ── */
+p a.btn-link {
+  color: #534AB7 !important;
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 15px !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  text-decoration: underline !important;
+  text-decoration-style: solid !important;
+  text-decoration-color: #c8e02a !important;
+  text-decoration-thickness: 3px !important;
+  text-underline-offset: 13px !important;
+}
+
+p a.btn-link:hover {
+  text-decoration: none !important;
+}
+
+/* ── Headings ── */
+h1,
+h2,
+h3 {
+  letter-spacing: 0.03em;
+}
+
+/* ── Navigation links ── */
+.header-nav-item a,
+.header-nav-folder-item a,
+.header-nav-folder-title {
+  font-family: 'Work Sans' !important;
+  font-weight: 400 !important;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase !important;
+  font-size: 14px !important;
+  text-decoration: none !important;
+}
+
+.header-nav-item a:hover,
+.header-nav-folder-item a:hover,
+.header-nav-folder-title:hover {
+  font-weight: 600 !important;
+  text-decoration: underline !important;
+  text-decoration-thickness: 2px !important;
+  text-underline-offset: 5px !important;
+}
+
+/* ── Checker divider utility classes ── */
+.checker-y {
+  height: 20px;
+  background:
+    repeating-linear-gradient(90deg, #c8e02a 0px, #c8e02a 10px, #0e1040 10px, #0e1040 20px),
+    repeating-linear-gradient(90deg, #0e1040 0px, #0e1040 10px, #c8e02a 10px, #c8e02a 20px);
+  background-position: 0 0, 0 10px;
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.checker-p {
+  height: 20px;
+  background:
+    repeating-linear-gradient(90deg, #f7f6f2 0px, #f7f6f2 10px, #534AB7 10px, #534AB7 20px),
+    repeating-linear-gradient(90deg, #534AB7 0px, #534AB7 10px, #f7f6f2 10px, #f7f6f2 20px);
+  background-position: 0 0, 0 10px;
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+.checker-n {
+  height: 20px;
+  background:
+    repeating-linear-gradient(90deg, #0e1040 0px, #0e1040 10px, #f7f6f2 10px, #f7f6f2 20px),
+    repeating-linear-gradient(90deg, #f7f6f2 0px, #f7f6f2 10px, #0e1040 10px, #0e1040 20px);
+  background-position: 0 0, 0 10px;
+  background-size: 20px 10px;
+  background-repeat: repeat-x;
+}
+
+/* ── Section kicker label helper class ── */
+.sec-kicker {
+  font-family: 'Work Sans';
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 0 !important;
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+}
+
+.sec-kicker-purp {
+  color: #534AB7;
+}
+
+.sec-kicker-lav {
+  color: #EEEDFE;
+}
+
+.sec-kicker-char {
+  color: #C8E02A;
+}
+
+.sec-kicker-navy {
+  color: #0E1040;
+}
+
+/* ========= HOME PAGE ========= */
+#indigo-hero .hero-h1 {
+  font-size: clamp(48px, 9vw, 110px) !important;
+}
+
+@media (max-width: 640px) {
+  #indigo-hero .hero-h1 {
+    font-size: 42px !important;
+    line-height: 1;
+  }
+}
+
+/* ── Pillar Numbers ── */
+.pillar-num {
+  font-family: 'Glancyr', sans-serif;
+  font-size: 90px;
+  font-weight: 600;
+  color: #EEEDFE;
+  line-height: 1;
+  margin-bottom: 1px;
+}
+
+.pillar-accent {
+  width: 28px;
+  height: 3px;
+  background: #c8e02a;
+  margin-bottom: 10px;
+}
+
+/* ── Marquee / ticker block ── */
+.sqs-block-marquee {
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.15em !important;
+  text-transform: uppercase !important;
+  line-height: 30px !important;
+}
+
+/* ── Events block list styling ── */
+.eventlist-event {
+  border-bottom: 1px solid #e0ddd5;
+  padding: 14px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.eventlist-event--date {
+  border-left: 3px solid #c8e02a;
+  padding-left: 12px;
+  min-width: 60px;
+}
+
+.eventlist-event--title a {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #0e1040;
+  text-decoration: none;
+}
+
+.eventlist-event--meta {
+  font-size: 10px;
+  color: #888780;
+  font-family: 'Work Sans', sans-serif;
+}
+
+/* ── Muted past-events section ── */
+.past-events-section .eventlist-event {
+  opacity: 0.45;
+}
+
+.past-events-section .eventlist-event--title a {
+  color: #888780;
+}
+
+/* ── Home Page BG video height ── */
+body.collection-66102e378d41b336ea421e09 .sqs-video-background-native {
+  height: 100vh !important;
+}
+
+body.collection-66102e378d41b336ea421e09 section:has(.sqs-video-background-native) {
+  height: 100vh !important;
+  min-height: 100vh !important;
+  max-height: 100vh !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+body.collection-66102e378d41b336ea421e09 section[data-section-id="69cecf28e2551818bdb1fdb4"] {
+  height: auto !important;
+  min-height: unset !important;
+  max-height: unset !important;
+  overflow: visible !important;
+  padding: revert !important;
+  margin: revert !important;
+}
+
+body.collection-66102e378d41b336ea421e09 section[data-section-id="69cecf28e2551818bdb1fdb4"] .sqs-video-background-native {
+  height: 100% !important;
+  min-height: unset !important;
+  max-height: unset !important;
+}
+
+/* ========= TEAM PAGE ========= */
+/* ── Swap logo ── */
+#collection-661f083bcff3377cddcf8ece .header-title-logo img,
+#collection-661f083bcff3377cddcf8ece .header-branding img {
+  content: url('https://images.squarespace-cdn.com/content/66102729044a365f961127e0/94bc2e63-ef06-4060-93cf-4ee37abfa1a5/logomark_black_2026.png?content-type=image%2Fpng');
+}
+
+/* ── Rider Cards ── */
+.rider-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.rider-img-box {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+  background: #0E1040;
+  flex-shrink: 0;
+}
+
+.rider-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: filter 0.55s ease, transform 0.55s ease;
+}
+
+.rider-img-box:hover .rider-img {
+  filter: grayscale(100%) blur(3px);
+  transform: scale(1.04);
+}
+
+.ph {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.55s ease, transform 0.55s ease;
+}
+
+.rider-img-box:hover .ph {
+  filter: grayscale(80%) blur(2px);
+  transform: scale(1.04);
+}
+
+.ph-bg {
+  position: absolute;
+  inset: 0;
+  background: #0E1040;
+}
+
+.ph-init {
+  position: relative;
+  font-size: clamp(32px, 5vw, 60px);
+  font-weight: 900;
+  color: rgba(200, 224, 42, 0.5);
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.rider-syms {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  align-items: flex-end;
+}
+
+.sym {
+  width: 18px;
+  height: 18px;
+  font-size: 10px;
+  font-weight: 700;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.sym-l {
+  border-color: #C8E02A;
+  color: #C8E02A;
+}
+
+.sym-c {
+  border-color: #b3acf0;
+  color: #b3acf0;
+  background: #0E1040;
+}
+
+.rider-hover {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 14px 14px 16px;
+  background: rgba(14, 16, 64, 0.84);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+  pointer-events: none;
+}
+
+.rider-img-box:hover .rider-hover {
+  opacity: 1;
+}
+
+.rh-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+}
+
+.rh-lbl {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #C8E02A;
+  margin-bottom: 2px;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.rh-val {
+  font-size: 12px;
+  font-weight: 500;
+  color: #F7F6F2;
+  line-height: 1;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.rider-nameplate-elite {
+  margin-top: 2px;
+  padding: 10px 12px;
+  background: rgba(200, 224, 42, 0.9);
+  border: 1px solid #4a5200;
+}
+
+.rider-nameplate-gen {
+  margin-top: 2px;
+  padding: 10px 12px;
+  background: #EEEDFE;
+  border: 1px solid #534AB7;
+}
+
+.rider-name {
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  font-family: 'Work Sans', sans-serif;
+}
+
+.rider-elite {
+  color: #4a5200;
+}
+
+.rider-gen {
+  color: #534AB7;
+}
+
+/* ── Team page mobile ── */
+@media (max-width: 767px) {
+  .roster-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+
+  .join-left {
+    padding-right: 0 !important;
+    border-right: none !important;
+    border-bottom: 1px solid #E0DDD5;
+    padding-bottom: 48px;
+  }
+
+  .join-right {
+    padding-left: 0 !important;
+    padding-top: 0 !important;
+    margin-top: 5 !important;
+  }
+
+  .rider-name {
+    font-size: 12px;
+  }
+}
+
+/* ======== Code of Conduct ======== */
+/* ── Swap logo ── */
+#collection-692a2a80f539d35a990fa56e .header-title-logo img,
+#collection-692a2a80f539d35a990fa56e .header-branding img {
+  content: url('https://images.squarespace-cdn.com/content/66102729044a365f961127e0/94bc2e63-ef06-4060-93cf-4ee37abfa1a5/logomark_black_2026.png?content-type=image%2Fpng');
+}
+
+/* ========= EVENTS PAGE ========= */
+/* ── Swap logo ── */
+#collection-69e6cbc025a62208b4b31f20 .header-title-logo img,
+#collection-69e6cbc025a62208b4b31f20 .header-branding img {
+  content: url('https://images.squarespace-cdn.com/content/66102729044a365f961127e0/94bc2e63-ef06-4060-93cf-4ee37abfa1a5/logomark_black_2026.png?content-type=image%2Fpng');
+}
+
+/* ========= CONTACT PAGE ========= */
+/* ── Swap logo ── */
+#collection-69d6f29e72a26b7a04a2e533 .header-title-logo img,
+#collection-69d6f29e72a26b7a04a2e533 .header-branding img {
+  content: url('https://images.squarespace-cdn.com/content/66102729044a365f961127e0/94bc2e63-ef06-4060-93cf-4ee37abfa1a5/logomark_black_2026.png?content-type=image%2Fpng');
+}
+
+/* ── Hide "(required)" text, replace with asterisk ── */
+.description.required {
+  font-size: 0 !important;
+  color: transparent !important;
+}
+
+.description.required::before {
+  content: '*' !important;
+  font-size: 13px !important;
+  color: #0E1040 !important;
+  font-weight: 700 !important;
+}
+
+/* ========= FOOTER ========= */
+footer .sqs-svg-icon--wrapper {
+  fill: rgba(255, 255, 255, 0.35) !important;
+  transition: fill 0.2s ease !important;
+}
+
+footer .sqs-svg-icon--wrapper:hover {
+  fill: #c8e02a !important;
+}
+
+footer .sqs-svg-icon--wrapper svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+footer,
+.footer-section {
+  background: #0e1040 !important;
+  border-top: 1px solid rgba(200, 224, 42, 0.12);
+}
+
+footer a,
+.footer-section a {
+  color: rgba(255, 255, 255, 0.35) !important;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color 0.2s !important;
+}
+
+footer a:hover,
+.footer-section a:hover {
+  color: #c8e02a !important;
+}
+
+/* ── Accordion block styling ── */
+.accordion-block .accordion-title {
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #0e1040 !important;
+}
+
+.accordion-block .accordion-title:hover {
+  color: #534AB7 !important;
+}
+
+.accordion-block .accordion-content {
+  font-family: 'Work Sans', sans-serif !important;
+  font-size: 13px !important;
+  color: #444441 !important;
+  line-height: 1.75 !important;
+}
+
+/* ── Product block ── */
+.ProductList-item .ProductList-title {
+  font-family: 'Work Sans', sans-serif !important;
+  font-weight: 700 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+}
+
+/* ── Mobile nav ── */
+@media (max-width: 767px) {
+  .header-nav-item a,
+  .header-nav-folder-item a {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 12px 0;
+  }
+
+  .eventlist-event {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+}
