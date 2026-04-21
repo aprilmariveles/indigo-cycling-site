@@ -153,9 +153,9 @@
   /* ── Init ── */
 
   document.addEventListener('DOMContentLoaded', function () {
-    createHeader();
-    initHeaderScroll();
-    initMobileMenu();
+    // createHeader();
+    // initHeaderScroll();
+    // initMobileMenu();
 
     document.querySelectorAll('.btn--tertiary').forEach(function (btn) {
       btn.style.position = 'relative';
