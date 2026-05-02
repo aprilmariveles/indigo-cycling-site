@@ -90,8 +90,11 @@
       +       '<li class="site-nav__item">'
       +         '<a href="/shop" target="_top" class="site-nav__link">Shop</a>'
       +       '</li>'
+      +       '<li class="site-nav__item">'
+      +         '<a href="/contact" target="_top" class="site-nav__link">Contact</a>'
+      +       '</li>'
       +       '<li class="site-nav__item site-nav__item--cta">'
-      +         '<a href="/contact" target="_top" class="btn btn--primary site-nav__cta">Contact</a>'
+      +         '<a href="" class="btn btn--primary site-nav__cta">Donate</a>'
       +       '</li>'
       +     '</ul>'
       +   '</nav>'
@@ -159,7 +162,12 @@
 
     document.querySelectorAll('.btn--tertiary').forEach(function (btn) {
       btn.style.position = 'relative';
-      attachWave(btn, '#c8e02a', 3, 2);
+      attachWave(btn, '#c8e02a', 3, 0);
+    });
+
+    document.querySelectorAll('a:not(.btn):not(.site-nav__link):not(.site-header__logo)').forEach(function (link) {
+      link.classList.add('wave-link');
+      attachWave(link, getComputedStyle(link).color, 1, -6);
     });
   });
 

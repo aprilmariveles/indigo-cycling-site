@@ -100,7 +100,7 @@ body {
   background-color: var(--color-chalk);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-top: 4.5rem; /* space for fixed header */
+  padding-top: 5.5rem; /* space for fixed header */
 }
 
 /* ============================================
@@ -153,6 +153,32 @@ a:hover {
   text-decoration: underline;
 }
 
+/* Inline links: static underline → animated wave on hover */
+a.wave-link {
+  position: relative;
+  display: inline-block;
+  text-decoration: none;
+}
+
+a.wave-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: currentColor;
+  transition: opacity 0.05s ease;
+}
+
+a.wave-link:hover {
+  text-decoration: none;
+}
+
+a.wave-link:hover::after {
+  opacity: 0;
+}
+
 /* ============================================
    Buttons
    ============================================ */
@@ -168,7 +194,7 @@ a:hover {
   text-align: center;
   border: 2px solid transparent;
   border-radius: 4px;
-  padding: 0.625rem 1.5rem;
+  padding: 0.5rem 1.25rem;
   cursor: pointer;
   line-height: 1.5;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -178,28 +204,54 @@ a:hover {
   text-decoration: none;
 }
 
-/* Primary — hollow, reverse-fills on hover */
+/* Primary — filled indigo, swaps to slipstream on hover */
 .btn--primary {
-  background: transparent;
-  color: var(--color-indigo);
+  background: var(--color-indigo);
+  color: var(--color-slipstream);
   border-color: var(--color-indigo);
 }
 
 .btn--primary:hover {
-  background: var(--color-indigo);
-  color: var(--color-chalk);
+  background: var(--color-slipstream);
+  color: var(--color-indigo);
+  border-color: var(--color-slipstream);
 }
 
-/* Secondary — filled, swaps to hollow on hover */
+/* Secondary — hollow, fills on hover */
 .btn--secondary {
-  background: var(--color-indigo);
-  color: var(--color-chalk);
+  background: transparent;
+  color: var(--color-indigo);
   border-color: var(--color-indigo);
 }
 
 .btn--secondary:hover {
+  background: var(--color-indigo);
+  color: var(--color-chalk);
+}
+
+/* Primary sprint — filled sprint, swaps to velodrome on hover */
+.btn--primary--sprint {
+  background: var(--color-sprint);
+  color: var(--color-velodrome);
+  border-color: var(--color-sprint);
+}
+
+.btn--primary--sprint:hover {
+  background: var(--color-velodrome);
+  color: var(--color-sprint);
+  border-color: var(--color-velodrome);
+}
+
+/* Secondary sprint — hollow sprint, fills on hover */
+.btn--secondary--sprint {
   background: transparent;
-  color: var(--color-indigo);
+  color: var(--color-sprint);
+  border-color: var(--color-sprint);
+}
+
+.btn--secondary--sprint:hover {
+  background: var(--color-sprint);
+  color: var(--color-velodrome);
 }
 
 /* Tertiary — text only, animated wave underline on hover */
@@ -217,7 +269,7 @@ a:hover {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 6px;
+  bottom: 4px;
   height: 3px;
   background: var(--color-sprint);
   transition: opacity 0.15s ease;
@@ -244,10 +296,9 @@ a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 2rem;
-  height: 4.5rem;
+  max-width: none;
+  padding: 0 3rem;
+  height: 5.5rem;
 }
 
 /* Logo */
@@ -261,7 +312,7 @@ a:hover {
 }
 
 .site-header__logo-img {
-  height: 2.75rem;
+  height: 3rem;
   width: auto;
 }
 
@@ -269,7 +320,7 @@ a:hover {
 .site-nav__list {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 1.25rem;
   list-style: none;
 }
 
@@ -341,6 +392,10 @@ a:hover {
 }
 
 /* CTA in nav */
+.site-nav__item--cta {
+  margin-left: 0.75rem;
+}
+
 .site-nav__cta.btn {
   padding: 0.45rem 1.25rem;
   font-size: 0.8125rem;
@@ -357,13 +412,15 @@ a:hover {
 }
 
 .site-header--light .site-nav__cta.btn {
-  color: var(--color-sprint);
-  border-color: var(--color-sprint);
+  background: var(--color-indigo);
+  color: var(--color-chalk);
+  border-color: var(--color-indigo);
 }
 
 .site-header--light .site-nav__cta.btn:hover {
-  background: var(--color-sprint);
-  color: var(--color-velodrome);
+  background: var(--color-slipstream);
+  color: var(--color-indigo);
+  border-color: var(--color-slipstream);
 }
 
 .site-header--light .site-nav__dropdown {
@@ -390,13 +447,15 @@ a:hover {
 }
 
 .site-header--dark .site-nav__cta.btn {
-  color: var(--color-indigo);
+  background: var(--color-indigo);
+  color: var(--color-chalk);
   border-color: var(--color-indigo);
 }
 
 .site-header--dark .site-nav__cta.btn:hover {
-  background: var(--color-indigo);
-  color: var(--color-chalk);
+  background: var(--color-slipstream);
+  color: var(--color-indigo);
+  border-color: var(--color-slipstream);
 }
 
 .site-header--dark .site-nav__dropdown {
@@ -501,7 +560,7 @@ a:hover {
 
 /* ── Mobile nav ── */
 
-@media (max-width: 768px) {
+@media (max-width: 1024px), (hover: none) {
   .site-header__inner {
     padding: 0 1.25rem;
   }

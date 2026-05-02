@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Test</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    .test-section { max-width: 600px; margin: 2rem auto; padding: 0 1.5rem; }
+    .test-row { display: flex; gap: 1rem; align-items: center; flex-wrap: wrap; margin-bottom: 2rem; }
+    .test-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.1em; color: #888780; margin-bottom: 0.5rem; }
+  </style>
+</head>
+<body data-header="dark">
+
+  <noscript>
+    <nav class="noscript-nav">
+      <a href="/about" target="_top">About</a>
+      <a href="/team" target="_top">Team</a>
+      <a href="/events" target="_top">Events</a>
+      <a href="/contact" target="_top">Contact</a>
+    </nav>
+  </noscript>
+
+  <div class="test-section">
+
+    <h2>Typography</h2>
+
+    <div style="margin-top: 2rem;">
+      <div class="test-label">Headings</div>
+      <div style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 1rem;">
+        <h1>H1 — Glancyr SemiBold</h1>
+        <h2>H2 — Glancyr SemiBold</h2>
+        <h3>H3 — Glancyr SemiBold</h3>
+        <h4>H4 — Glancyr SemiBold</h4>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem;">
+      <div class="test-label">Body copy</div>
+      <div style="margin-top: 0.75rem; display: flex; flex-direction: column; gap: 1rem;">
+        <p class="p1">P1 — Large body. Work Sans 400, 1.25rem. Used for intros and lead text.</p>
+        <p>P2 — Default body. Work Sans 400, 1rem. The standard paragraph style for most content across the site.</p>
+        <p class="p3">P3 — Small body. Work Sans 400, 0.8rem. Used for captions, labels, and fine print.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--color-border-grey);">
+    <h2>Button Styles</h2>
+
+    <div style="margin-top: 2rem;">
+      <div class="test-label">Primary — filled, color-swap on hover</div>
+      <div class="test-row">
+        <a href="#" class="btn btn--primary">Register Now</a>
+        <a href="#" class="btn btn--primary--sprint">Register Now</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="test-label">Secondary — hollow, fills on hover</div>
+      <div class="test-row">
+        <a href="#" class="btn btn--secondary">Learn More</a>
+        <a href="#" class="btn btn--secondary--sprint">Learn More</a>
+      </div>
+    </div>
+
+    <div>
+      <div class="test-label">Tertiary — static underline + wave on hover</div>
+      <div class="test-row">
+        <a href="#" class="btn btn--tertiary">View Details</a>
+      </div>
+    </div>
+
+    </div>
+
+    <div style="margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--color-border-grey);">
+      <h2>Inline Link — Wave Underline</h2>
+
+      <div style="margin-top: 1rem;">
+        <div class="test-label">Default color (indigo)</div>
+        <p style="margin-top: 0.5rem;">Check out our <a href="#">upcoming events</a> and <a href="#">2025 race calendar</a> for the full schedule.</p>
+      </div>
+
+      <div style="margin-top: 1.5rem;">
+        <div class="test-label">On a dark background</div>
+        <p style="margin-top: 0.5rem; background: var(--color-velodrome); color: var(--color-chalk); padding: 1rem; border-radius: 6px;">
+          Read more about our <a href="#" style="color: var(--color-sprint);">grant program</a> and how to <a href="#" style="color: var(--color-chalk);">apply for funding</a>.
+        </p>
+      </div>
+
+      <div style="margin-top: 1.5rem;">
+        <div class="test-label">Mixed with body copy</div>
+        <p style="margin-top: 0.5rem;">Indigo Cycling Chicago is a <a href="#">competitive cycling club</a> based on the North Side. We race criteriums, road races, and track. <a href="#">Join the team</a> or <a href="#">sponsor us</a> for the 2025 season.</p>
+      </div>
+    </div>
+
+    <div style="margin-top: 2.5rem; padding-top: 2.5rem; border-top: 1px solid var(--color-border-grey);">
+      <h2>Scroll Test</h2>
+      <p style="margin-top: 0.5rem; color: #888780;">Scroll down — the header should become solid chalk with a subtle border. Resize to &lt;768px to test the hamburger menu.</p>
+    </div>
+
+    <div style="height: 150vh;"></div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
