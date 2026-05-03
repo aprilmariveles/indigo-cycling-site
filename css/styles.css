@@ -104,6 +104,30 @@ body {
 }
 
 /* ============================================
+   Layout
+   ============================================ */
+
+.page-container {
+  max-width: 75rem; /* 1200px */
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.page-section {
+  padding: 4rem 0;
+}
+
+@media (max-width: 768px) {
+  .page-container {
+    padding: 0 1.25rem;
+  }
+
+  .page-section {
+    padding: 2.5rem 0;
+  }
+}
+
+/* ============================================
    Typography
    ============================================ */
 
